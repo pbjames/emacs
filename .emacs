@@ -1,4 +1,6 @@
 (setq inhibit-startup-screen t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
 (require 'package)
 (add-to-list 'exec-path "~/.local/bin")
 (add-to-list 'exec-path "~/.cargo/bin")
@@ -137,6 +139,9 @@
 (keymap-global-set "C-c J" #'windmove-down)
 (keymap-global-set "C-c K" #'windmove-up)
 (keymap-global-set "C-c L" #'windmove-right)
+(keymap-global-set "C-c l" #'org-store-link)
+(keymap-global-set "C-c a" #'org-agenda)
+(keymap-global-set "C-c c" #'org-capture)
 
 ;; === Leetcode ===
 (use-package leetcode
