@@ -1,0 +1,8 @@
+(setq inhibit-startup-screen t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(set-frame-font "JuliaMono Nerd Font-15" nil t)
+(load-theme 'solarized-dark t)
+(add-to-list 'exec-path "~/.local/bin")
+(add-to-list 'exec-path "~/.cargo/bin")
+(provide 'init-opts)

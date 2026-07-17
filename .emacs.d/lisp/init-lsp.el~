@@ -1,0 +1,19 @@
+(add-hook 'python-mode-hook #'eglot-ensure)
+(add-hook 'python-ts-mode-hook #'eglot-ensure)
+(add-hook 'rust-mode-hook #'eglot-ensure)
+(add-hook 'rust-ts-mode-hook #'eglot-ensure)
+(add-hook 'js-mode-hook #'eglot-ensure)
+(add-hook 'js-ts-mode-hook #'eglot-ensure)
+(add-hook 'typescript-mode-hook #'eglot-ensure)
+(add-hook 'typescript-ts-mode-hook #'eglot-ensure)
+(add-hook 'java-mode-hook #'eglot-java-mode)
+
+;; === Completion Popup ===
+(use-package corfu
+  :ensure t
+  :init
+  (global-corfu-mode 1)
+  (setq corfu-auto t
+        corfu-auto-delay 0.2
+        corfu-auto-prefix 2))
+(provide 'init-lsp
