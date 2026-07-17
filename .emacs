@@ -1,4 +1,6 @@
 (setq inhibit-startup-screen t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
 (require 'package)
 (add-to-list 'exec-path "~/.local/bin")
 (add-to-list 'exec-path "~/.cargo/bin")
@@ -9,7 +11,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(color-theme corfu eat eglot-java leetcode meow rust-mode)))
+ '(package-selected-packages
+   '(color-theme corfu eat eglot-java leetcode meow pet rust-mode
+		 solarized-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -101,9 +105,9 @@
     '("<escape>" . ignore)))
 (meow-setup)
 (meow-global-mode 1)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/yaru-dark/themes/")
-(load-theme 'ubuntu t)
-
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/yaru-dark/themes/")
+;;(load-theme 'ubuntu t)
+(load-theme 'solarized-dark t)
 ;; === LSP via Eglot (built-in) ===
 ;; Install language servers first:
 ;;   pip install pyright
