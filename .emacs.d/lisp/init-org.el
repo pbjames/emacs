@@ -1,0 +1,11 @@
+(setq org-capture-templates
+      '(("t" "Task" entry (file "~/Org/inbox.org")
+	 "* TODO %?\n  %U")
+	("j" "Journal" entry (file+olp+datetree "~/Org/journal.org")
+	 "* %U %?\n%i")
+	("n" "Note" entry (file "~/Org/notes.org")
+	 "* %?\n  %U\n  %a")))
+(keymap-global-set "C-c l" #'org-store-link)
+(keymap-global-set "C-c a" #'org-agenda)
+(keymap-global-set "C-c c" #'org-capture)
+(provide 'init-org)
